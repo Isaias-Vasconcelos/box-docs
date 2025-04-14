@@ -7,12 +7,10 @@
 
 ## 🚀 Funcionalidades
 
-- ✅ Leitura dinâmica de configurações via YAML
 - 🔐 Autenticação JWT
 - 🔁 Retry automático
 - 🛡️ Rate Limiting
 - ⚠️ Tratamento centralizado de erros
-- 📂 Comunicação segura via rede Docker interna
 - 🧠 Arquitetura extensível
 
 ---
