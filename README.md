@@ -192,7 +192,16 @@ Authorization: Bearer <seu_token_aqui>
 ## ⚠️ Tratamento de Erros
 
 - Todos os erros passam por middlewares centralizados
-- Erros da API retornam mensagens padronizadas (ex: `{"origin":"http://service.m1:5000", "enpoint": "/users" , "statusCode": 500 , "data": { resposta de erro do seu serviço }}`)
+- Erros da API retornam mensagens padronizadas:
+  
+```json
+{
+  "origin": "http://service.m1:5000",
+  "endpoint": "/users",
+  "statusCode": 500,
+  "data": { /* resposta de erro do seu serviço */ }
+}
+```
 
 ---
 
@@ -207,6 +216,24 @@ curl http://localhost:8080/users   -H "Authorization: Bearer SEU_TOKEN_JWT"
 # 🔑 Token de Acesso Necessário para o API Gateway
 
 Para utilizar o **API Gateway**, é necessário configurar o **AccessToken** no arquivo `service.yaml`. Este token é gerado diretamente no **site de autenticação** e é essencial para garantir que somente usuários cadastrados em nossa base possam acessar.
+
+---
+
+## 📌 Funcionalidades Futuras
+
+Essas são as próximas melhorias previstas para o **BOX - API Gateway**:
+
+- ⚖️ **Balanceamento de Carga**  
+  Distribuição automática de requisições entre múltiplas instâncias dos serviços internos para maior performance e resiliência.
+
+- 🧰 **Cache Inteligente**  
+  Implementação de cache para respostas frequentes, com configurações dinâmicas e invalidação automática.
+
+- 🪵 **Geração de Arquivo de Log**  
+  Logs estruturados para requisições, respostas, erros e métricas de uso em formato `.log` para facilitar auditoria e análise.
+
+- 🧾 **Suporte a JSON como Configuração**  
+  Além do `service.yaml`, será possível utilizar também um `service.json` com a mesma estrutura para configurar o gateway.
 
 ---
 
