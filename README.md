@@ -61,7 +61,6 @@ services:
       origin: http://service-cep:5004
 
 config:
-  accessToken: 123456                    # Token de acesso básico (Gerado no site).
 
   auth:                                  # Autenticação JWT
     origin: http://service-auth:5003     # Serviço que valida o token JWT
@@ -209,12 +208,6 @@ Authorization: Bearer <seu_token_aqui>
 ```bash
 curl http://localhost:8080/users   -H "Authorization: Bearer SEU_TOKEN_JWT"
 ```
-
----
-
-# 🔑 Token de Acesso Necessário para o API Gateway
-
-Para utilizar o **API Gateway**, é necessário configurar o **AccessToken** no arquivo `service.yaml`. Este token é gerado diretamente no **site de autenticação** e é essencial para garantir que somente usuários cadastrados em nossa base possam acessar.
 
 ---
 
