@@ -11,7 +11,6 @@
 - 🔐 Autenticação JWT
 - 🔁 Retry automático
 - 🛡️ Rate Limiting
-- 🚀 Cache
 - ⚠️ Tratamento centralizado de erros
 - 📂 Comunicação segura via rede Docker interna
 - 🧠 Arquitetura extensível
