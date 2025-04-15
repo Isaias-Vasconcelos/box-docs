@@ -1,5 +1,5 @@
 
-# 📦 BOX - API Gateway Dinâmico com .NET
+# 📦 BOX - Controle Total das Suas APIs com um Gateway Rápido e Flexível
 
 **BOX** é um **API Gateway** construído do zero em **ASP.NET Core**, com foco em **orquestração**, **segurança**, **resiliência**, e **configuração dinâmica** via YAML. Ele centraliza o acesso a múltiplas APIs internas e se comunica com elas via rede Docker interna. Todo o comportamento do gateway é controlado pelo `service.yaml`.
 
