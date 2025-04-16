@@ -19,7 +19,7 @@
 
 ## 🧩 Exemplo Completo de `service.json`
 
-```json
+```jsonc
 {
   // URL para autenticação do usuário
   "AuthOrigin": "http://localhost:3000/verify-user",
@@ -242,7 +242,7 @@ Authorization: Bearer <seu_token_aqui>
 - Todos os erros passam por middlewares centralizados
 - Erros da API retornam mensagens padronizadas:
   
-```json
+```jsonc
 {
   "origin": "http://service.m1:5000",
   "endpoint": "/users",
