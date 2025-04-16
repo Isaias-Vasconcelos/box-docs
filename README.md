@@ -19,7 +19,7 @@
 
 ## 🧩 Exemplo Completo de `service.json`
 
-```jsonc
+```json
 {
   // URL para autenticação do usuário
   "AuthOrigin": "http://localhost:3000/verify-user",
