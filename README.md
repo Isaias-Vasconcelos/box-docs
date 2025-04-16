@@ -264,13 +264,13 @@ BOX por meio do YARP oferece diferentes estratégias de **balanceamento de carga
 - **Observações**: Mais leve que o `LeastRequests`, com resultado similar.
   
 
-## 🔤 FirstAlphabetical
+### 🔤 FirstAlphabetical
 
 - **Descrição**: Seleciona o primeiro destino disponível com base em ordem alfabética.
 - **Uso comum**: Ambientes com failover onde um destino é sempre preferido.
 - **Observações**: Não deve ser usado para balanceamento com múltiplos destinos ativos.
 
-## 💡 Exemplo de configuração
+### 💡 Exemplo de configuração
 
 ```json
 {
