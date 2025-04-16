@@ -1,7 +1,7 @@
 
 # 📦 BOX - Simplifique Suas Integrações com um Gateway de APIs Universal
 
-**BOX** é um **API Gateway** construído em **.NET** baseado no YARP, com foco em **orquestração**, **segurança**, **resiliência**, e **configuração dinâmica** via JSON. Ele centraliza o acesso a múltiplas APIs internas e se comunica com elas via rede Docker interna. Todo o comportamento do gateway é controlado pelo `service.json`.
+**BOX** é um **API Gateway** construído em **.NET** utilizando o YARP, com foco em **orquestração**, **segurança**, **resiliência**, e **configuração dinâmica** via JSON. Ele centraliza o acesso a múltiplas APIs internas e se comunica com elas via rede Docker interna. Todo o comportamento do gateway é controlado pelo `service.json`.
 
 ---
 
