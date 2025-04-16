@@ -235,37 +235,40 @@ Authorization: Bearer <seu_token_aqui>
 
 BOX por meio do YARP oferece diferentes estratégias de **balanceamento de carga** para distribuir as requisições entre múltiplos destinos. Abaixo estão os tipos disponíveis e suas descrições:
 
+
 ### 🔁 RoundRobin
 
 - **Descrição**: Distribui as requisições de forma sequencial entre os destinos.
 - **Uso comum**: Ideal para uma distribuição uniforme e previsível.
 - **Observações**: Não considera o estado atual de carga de cada destino.
+  
 
 ### 🎲 Random
 
 - **Descrição**: Escolhe um destino aleatoriamente para cada requisição.
 - **Uso comum**: Aplicações que podem tolerar variações na distribuição.
 - **Observações**: Pode gerar distribuição desigual em ambientes com cargas assimétricas.
+  
 
 ### 🧮 LeastRequests
 
 - **Descrição**: Envia a requisição para o destino com menos requisições ativas.
 - **Uso comum**: Quando é importante equilibrar ativamente a carga entre servidores.
 - **Observações**: Precisa monitorar continuamente as requisições ativas.
+  
 
 ### ⚡ PowerOfTwoChoices *(padrão)*
 
 - **Descrição**: Escolhe dois destinos aleatórios e seleciona o que tem menos requisições ativas.
 - **Uso comum**: Bom equilíbrio entre desempenho e distribuição eficiente.
 - **Observações**: Mais leve que o `LeastRequests`, com resultado similar.
+  
 
 ## 🔤 FirstAlphabetical
 
 - **Descrição**: Seleciona o primeiro destino disponível com base em ordem alfabética.
 - **Uso comum**: Ambientes com failover onde um destino é sempre preferido.
 - **Observações**: Não deve ser usado para balanceamento com múltiplos destinos ativos.
-
----
 
 ## 💡 Exemplo de configuração
 
