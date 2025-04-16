@@ -106,14 +106,14 @@
         "Destinations": {
           // Destino único para o cluster de usuários
           "origin1": {
-            "Address": "https://jsonplaceholder.typicode.com/"
+            "Address": "https://service-user:5000/"
           }
         }
       },
       "servicePost": {
         "Destinations": {
           "origin1": {
-            "Address": "https://jsonplaceholder.typicode.com/"
+            "Address": "https://service-post:5001/"
           }
         }
       },
@@ -123,10 +123,10 @@
         "Destinations": {
           // Múltiplos destinos para balanceamento
           "origin1": {
-            "Address": "https://jsonplaceholder.typicode.com/"
+            "Address": "https://service-todo1:5000/"
           },
           "origin2": {
-            "Address": "https://jsonplaceholder.typicode.com/"
+            "Address": "https://service-todo2:5001/"
           }
         }
       }
@@ -152,9 +152,8 @@ services:
     depends_on:
       - service-post
       - service-user
-      - service-cep
+      - service-todo
       - service-auth
-      - service-stats
     networks:
       - internal
 
@@ -168,18 +167,13 @@ services:
     networks:
       - internal
 
-  service-cep:
+  service-todo:
     image: seuusuario/service-cep:latest
     networks:
       - internal
 
   service-auth:
     image: seuusuario/service-auth:latest
-    networks:
-      - internal
-
-  service-stats:
-    image: seuusuario/service-stats:latest
     networks:
       - internal
 
@@ -193,7 +187,7 @@ networks:
 ## ▶️ Como executar
 
 1. Tenha o Docker instalado.
-2. Crie um arquivo `service.yaml` com base no exemplo acima.
+2. Crie um arquivo `service.json` com base no exemplo acima.
 3. Crie um `docker-compose.yml` com os serviços internos.
 4. Rode:
 
@@ -224,7 +218,7 @@ Authorization: Bearer <seu_token_aqui>
 
 ## 🔁 Retry com Polly
 
-- Configurado via `httpRetry` no `service.yaml`
+- Configurado via `httpRetry` no `service.json`
 - Em caso de erro temporário (timeout, 5xx), o gateway tentará novamente
 - Respeita o número máximo de tentativas e tempo entre elas
 
