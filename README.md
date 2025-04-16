@@ -231,11 +231,9 @@ Authorization: Bearer <seu_token_aqui>
 
 ---
 
-## ⚖️ Políticas de Load Balancing no YARP
+## ⚖️ Load Balancing
 
-O YARP (Yet Another Reverse Proxy) oferece diferentes estratégias de **balanceamento de carga** para distribuir as requisições entre múltiplos destinos. Abaixo estão as políticas disponíveis e suas descrições:
-
----
+BOX por meio do YARP oferece diferentes estratégias de **balanceamento de carga** para distribuir as requisições entre múltiplos destinos. Abaixo estão os tipos disponíveis e suas descrições:
 
 ### 🔁 RoundRobin
 
@@ -243,15 +241,11 @@ O YARP (Yet Another Reverse Proxy) oferece diferentes estratégias de **balancea
 - **Uso comum**: Ideal para uma distribuição uniforme e previsível.
 - **Observações**: Não considera o estado atual de carga de cada destino.
 
----
-
 ### 🎲 Random
 
 - **Descrição**: Escolhe um destino aleatoriamente para cada requisição.
 - **Uso comum**: Aplicações que podem tolerar variações na distribuição.
 - **Observações**: Pode gerar distribuição desigual em ambientes com cargas assimétricas.
-
----
 
 ### 🧮 LeastRequests
 
@@ -259,15 +253,11 @@ O YARP (Yet Another Reverse Proxy) oferece diferentes estratégias de **balancea
 - **Uso comum**: Quando é importante equilibrar ativamente a carga entre servidores.
 - **Observações**: Precisa monitorar continuamente as requisições ativas.
 
----
-
 ### ⚡ PowerOfTwoChoices *(padrão)*
 
 - **Descrição**: Escolhe dois destinos aleatórios e seleciona o que tem menos requisições ativas.
 - **Uso comum**: Bom equilíbrio entre desempenho e distribuição eficiente.
 - **Observações**: Mais leve que o `LeastRequests`, com resultado similar.
-
----
 
 ## 🔤 FirstAlphabetical
 
